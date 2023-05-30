@@ -21,7 +21,7 @@ jobs:
       run: terraform plan -out=tfplan
 
     - name: Terraform Apply
-      run: terraform apply -auto-approved
+      run: terraform apply -auto-approve
     env:
       AWS_ACCESS_KEY_ID: AKIASRM3QENBI64GP4UK
       AWS_SECRET_ACCESS_KEY: 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
