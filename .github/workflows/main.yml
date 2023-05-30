@@ -14,12 +14,7 @@ jobs:
       with:
         terraform_version: <TERRAFORM_VERSION>  # Replace with the desired version of Terraform
 
-    - name: Terraform Init
-      run: terraform init
-    - name: Terraform refresh
-      run: terraform refresh
-    - name: Terraform Plan
-      run: terraform plan    
+       
     
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
