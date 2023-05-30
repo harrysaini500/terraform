@@ -1,0 +1,24 @@
+name: github action with terraform
+on:
+  workflow_dispatch:
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: <TERRAFORM_VERSION>  # Replace with the desired version of Terraform
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Destroy
+      run: terraform destroy -auto-approve
+    env:
+      AWS_ACCESS_KEY_ID: AKIASRM3QENBI64GP4UK
+      AWS_SECRET_ACCESS_KEY: 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
