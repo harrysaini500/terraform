@@ -16,6 +16,8 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+    - name: terraform import
+      run: terraform import
        
     
     - name: Terraform Destroy
